@@ -86,5 +86,10 @@ app.get('/api/match', async (req, res) => {
     }
 });
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`🚀 서버 실행 중: http://localhost:${PORT}`));
+// Render가 제공하는 포트를 사용하거나 없으면 3000 사용
+const PORT = process.env.PORT || 3000; 
+
+// 0.0.0.0은 외부에서 오는 접속을 모두 허용하겠다는 뜻입니다.
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 서버가 포트 ${PORT}에서 정상 작동 중입니다!`);
+});
