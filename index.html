@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>AI 팀 매칭 시스템</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 오른쪽 프로필 작성 버튼 -->
+        <button id="profileBtn" class="btn side-btn">프로필 작성</button>
+
+        <!-- 가운데 팀 매칭 버튼 -->
+        <div class="main-content">
+            <h1>Team Up!</h1>
+            <button id="matchBtn" class="btn center-btn">팀 매칭 시작</button>
+            <div id="resultArea" class="result-area"></div>
+        </div>
+    </div>
+
+    <!-- 프로필 질문 모달 (AI 채팅창 역할) -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <div id="chatWindow" class="chat-window">
+                <p class="ai-msg">안녕하세요! 최적의 팀을 위해 몇 가지 질문을 드릴게요.</p>
+            </div>
+            <input type="text" id="userInput" placeholder="답변을 입력하세요...">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
