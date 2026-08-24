@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 // 1. 설정 (2.5 Flash 고정 및 DB 주소)
 // ==========================================
 const apiKey = "AIzaSyBnq3YMSylce45oA1YAT7Xua8hIsAxA6Dw"; 
-const dbURI = "mongodb+srv://hwroh:fk10151015@cluster0.fm49kop.mongodb.net/test?retryWrites=true&w=majority";
+const dbURI = process.env.MONGODB_URI;
 
 // MongoDB 연결 옵션
 const connectionOptions = {
